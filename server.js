@@ -4,7 +4,7 @@ const { Pool } = require('pg');
 const bcrypt = require('bcrypt');
 
 const app = express();
-const port = 3000;
+const port = 5000;
 
 const pool = new Pool({
     connectionString: 'postgres://pydentech:DeD-140619@pyden-express.cjucwyoced9l.sa-east-1.rds.amazonaws.com:5432/pyden-express',
