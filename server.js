@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { Pool } = require('pg');
 const bcrypt = require('bcrypt');
+const cors = require('cors'); // Importando o pacote cors
 
 const app = express();
 const port = 5000;
@@ -11,6 +12,7 @@ const pool = new Pool({
 });
 
 app.use(bodyParser.json());
+app.use(cors()); // Usando o cors
 
 app.post('/api/registroMotoristasAdministrativos', async (req, res) => {
     const {
